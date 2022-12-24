@@ -1,0 +1,8 @@
+<launch>
+  <arg name= "port" default="/dev/ttyACM0"/>
+  <node name="imu_driver.py" pkg="driver" type="imu_driver.py" output="screen"/>
+    <param name ="port" value ="$(arg port)"/>
+  <arg name= "port1" default="/dev/ttyACM0"/>
+  <node name="gps_driver.py" pkg="driver" type="gps_driver.py" output="screen"/>
+    <param name ="port1" value ="$(arg port1)"/>
+</launch>
